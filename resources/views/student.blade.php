@@ -16,31 +16,70 @@
 
   @if($layout == 'index')
   <div class="container-fluid">
-    <section class="col">
-      @include("studentslist");
-    </section>
-    <section class="col"></section>
+    <div class="row">
+      <section class="col">
+        @include("studentslist");
+      </section>
+      <section class="col"></section>
+    </div>
   </div>
   @elseif($layout == 'create')
   <div class="container-fluid">
-    <section class="col">
-      @include("studentslist");
-    </section>
-    <section class="col"></section>
+    <div class="row">
+      <section class="col">
+        @include("studentslist");
+      </section>
+      <section class="col">
+        <form action="{{url('/store')}}" method="post">
+          <div class="form-group">
+            <label>CNE :</label>
+            <input type="cne" class="form-control" placeholder="Enter CNE">
+          </div>
+
+          <div class="form-group">
+            <label>First Name :</label>
+            <input type="firstName" class="form-control" placeholder="Enter First Name">
+          </div>
+
+          <div class="form-group">
+            <label>Last Name :</label>
+            <input type="lastName" class="form-control" placeholder="Enter Last Name">
+          </div>
+
+          <div class="form-group">
+            <label>Age :</label>
+            <input type="age" class="form-control" placeholder="Enter Age">
+          </div>
+
+          <div class="form-group">
+            <label>Speciality :</label>
+            <input type="speciality" class="form-control" placeholder="Enter Speciality">
+          </div>
+
+          <input type="submit" class="btn btn-info" value="Save">
+          <input type="reset" class="btn btn-warning" value="Reset">
+
+        </form>
+      </section>
+    </div>
   </div>
   @elseif($layout == 'show')
   <div class="container-fluid">
-    <section class="col">
-      @include("studentslist");
-    </section>
-    <section class="col"></section>
+    <div class="row">
+      <section class="col">
+        @include("studentslist");
+      </section>
+      <section class="col"></section>
+    </div>
   </div>
   @elseif($layout == 'edit')
   <div class="container-fluid">
-    <section class="col">
-      @include("studentslist");
-    </section>
-    <section class="col"></section>
+    <div class="row">
+      <section class="col">
+        @include("studentslist");
+      </section>
+      <section class="col"></section>
+    </div>
   </div>
   @endif
 
